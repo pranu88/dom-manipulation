@@ -56,14 +56,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   quote.addEventListener('click', randomQuote)
 
   // Part 9
-  const newClass = document.querySelectorAll('.blog-post')
-  
-  newClass.forEach(blog => {
-    blog.addEventListener('onmouseout', () => {blog.classList.toggle('.purple');})
-    blog.addEventListener('click',() => {blog.classList.toggle('.red');}) 
+  let newClass = document.querySelectorAll('.blog-post')
+    newClass.forEach(blog => {
+    blog.addEventListener('mouseout', () => {
+      blog.classList.toggle('purple')
+    })
+    blog.addEventListener('mouseenter', () => {
+      blog.classList.toggle('red')
+    }) 
     
   }); 
-  
-
 
 });
